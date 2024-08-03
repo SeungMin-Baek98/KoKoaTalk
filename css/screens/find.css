@@ -42,6 +42,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
 }
 
 .open-post__title {
@@ -137,6 +138,6 @@ body {
     transform: none;
   }
 }
-.open-post__heart-count:hover i {
+.open-post__photo:hover i {
   animation: heartBeat 1s linear infinite;
 }

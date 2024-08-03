@@ -1,0 +1,15 @@
+.new-version {
+  position: absolute;
+  background-color: tomato;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-version span {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}

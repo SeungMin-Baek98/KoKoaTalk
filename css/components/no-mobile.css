@@ -1,9 +1,9 @@
 /* 스크롤 불가 설정 */
-body {
+/* body {
   margin: 0;
   height: 100%;
   overflow: hidden;
-}
+} */
 
 #no-mobile {
   position: absolute;

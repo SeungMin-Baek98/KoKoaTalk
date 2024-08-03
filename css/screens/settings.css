@@ -1,6 +1,10 @@
+.dark {
+  opacity: 0.7;
+}
+
 .settings__setting {
   padding: 20px 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -12,6 +16,19 @@
   opacity: 0.8;
 }
 
-.settings__setting-column:last-child {
-  opacity: 0.7;
+.settings__setting:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.border-line {
+  border-bottom: var(--common-border);
+}
+
+.settings__setting-column {
+  position: relative;
+}
+
+.new-version {
+  top: 5;
+  right: -25;
 }
