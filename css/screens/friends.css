@@ -5,6 +5,7 @@
   padding: 15px 0px;
   font-size: 16px;
   margin-bottom: 10px;
+  margin-top: -15px;
 }
 
 #friends-display-link i {
@@ -20,7 +21,7 @@
 }
 
 .friends-screen__channel {
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: var(--common-border);
   padding: 15px 0px;
   margin-bottom: 15px;
   color: rgba(0, 0, 0, 0.3);
@@ -35,4 +36,32 @@
   justify-content: space-between;
   margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* css로 elements들을 숨기거나 제거하는방법은 좋지않다
+  --> 개발자 도구로 요소를 확인해보면 그 요소가 아직 존재하기때문에 자바스크립트로 클래스를 제거하는 방식이 좋다. */
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  /* forwards을 사용하면 마지막 속성값(opacity: 0;)을 계속 유지한다 */
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  /* 화면이 랜더링 시작후 1초뒤에 애니메이션이 시작된다. */
+  animation-delay: 1s;
 }
